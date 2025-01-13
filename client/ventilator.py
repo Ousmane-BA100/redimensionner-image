@@ -10,7 +10,7 @@ def main():
 
     # PUSH socket pour envoyer les tâches
     socket = context.socket(zmq.PUSH)
-    socket.bind("tcp://*:5557")  # Bind sur localhost ou réseau
+    socket.bind("tcp://25.31.219.243:5557")  # Bind sur localhost ou réseau
 
     print("Client ventilator démarré : envoi des tâches aux workers...")
     images = [img for img in os.listdir(DATASET_PATH) if img.endswith((".jpg", ".png"))]

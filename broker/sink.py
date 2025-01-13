@@ -6,7 +6,7 @@ def main():
 
     # PULL socket pour recevoir les résultats
     receiver = context.socket(zmq.PULL)
-    receiver.bind("tcp://*:5558")  # L'écoute sur localhost ou réseau
+    receiver.bind("tcp://25.31.219.243:5558")  # L'écoute sur localhost ou réseau
 
     print("Broker (sink) démarré : collecte des résultats...")
     while True:

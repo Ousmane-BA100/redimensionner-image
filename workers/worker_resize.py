@@ -13,11 +13,11 @@ def main():
 
     # PULL socket pour recevoir les tâches
     receiver = context.socket(zmq.PULL)
-    receiver.connect("tcp://192.168.1.10:5557")  # Adresse du ventilator
+    receiver.connect("tcp://localhost:5557")  # Adresse du ventilator
 
     # PUSH socket pour envoyer les résultats
     sender = context.socket(zmq.PUSH)
-    sender.connect("tcp://192.168.1.10:5558")  # Adresse du broker
+    sender.connect("tcp://localhost:5558")  # Adresse du broker
 
     print("Worker 1 (Redimensionnement) connecté...")
     while True:
